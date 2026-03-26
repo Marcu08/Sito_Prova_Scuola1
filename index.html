@@ -11,7 +11,12 @@
     <h1>MONUMENTI DI ROMA</h1>
     <div id="mappa"></div>
     <button id="button">Mostra statistiche</button>
-
+    <form id="formMonumento">
+    <input type="text" id="nome" placeholder="Nome monumento" required>
+    <input type="number" id="lat" placeholder="Latitudine" step="any" required>
+    <input type="number" id="lon" placeholder="Longitudine" step="any" required>
+    <button type="submit">Aggiungi</button>
+</form>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script src="monumenti.js"></script>
     <script src="script.js"></script>

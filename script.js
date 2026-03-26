@@ -14,3 +14,25 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(mappa);
 
 aggiungiMonumenti(mappa);
+// L'array monumenti si trova nel file monumenti.js
+
+document.getElementById("formMonumento").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const nome = document.getElementById("nome").value;
+    const lat = parseFloat(document.getElementById("lat").value);
+    const lon = parseFloat(document.getElementById("lon").value);
+
+    const nuovoMonumento = {
+        nome: nome,
+        lat: lat,
+        lon: lon
+    };
+
+    monumenti.push(nuovoMonumento);
+
+    // opzionale: aggiornare la mappa subito
+    L.marker([lat, lon])
+        .addTo(mappa)
+        .bindPopup(nome);
+});
