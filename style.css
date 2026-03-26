@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+h1 {
+    color: darkred;
+}
+
+#mappa {
+    height: 500px;
+    width: 80%;
+    margin: 20px auto;
+    border: 2px solid black;
+}
+
+.link-roma {
+    display: block;
+    margin-top: 20px;
+    font-size: 18px;
+    color: blue;
+    text-decoration: none;
+}
+
+.link-roma:hover {
+    color: red;
+}
